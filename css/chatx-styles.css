@@ -1,0 +1,107 @@
+
+
+.conversations {
+    overflow: hidden;
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    margin-bottom: 30px;
+}
+
+.groupChats {
+    width: 100%;
+    border-color: rgba(32,33,35,.5);
+    border-bottom-width: 1px;
+}
+
+.user-prompts {
+    background-color: #505052;
+}
+
+.chat-prompts {
+    background-color: #696a78;
+}
+
+.chat-loader {
+    display: none;
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    right: 5.5rem;
+    bottom: 7.9rem;
+}
+
+.chat-loader:after {
+    content: " ";
+    display: block;
+    border-radius: 50%;
+    width: 0;
+    height: 0;
+    margin: 0px;
+    box-sizing: border-box;
+    border: 15px solid #e73939;
+    border-color: #e73939 transparent #e73939 transparent;
+    animation: chat-loader 1.2s infinite;
+}
+
+@keyframes chat-loader {
+  0% {
+    transform: rotate(0);
+    animation-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
+  }
+  50% {
+    transform: rotate(900deg);
+    animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+  }
+  100% {
+    transform: rotate(1800deg);
+  }
+}
+
+.user-prompts .prompts .prompt-message {
+    background: #696a78;
+}
+
+.chat-prompts .prompts .prompt-message {
+    background: #4343488f;
+}
+
+.groupChats .prompts {
+    width: 75%;
+    color: #f8f8ff;
+    margin: 20px auto;
+    display: flex;
+}
+
+.groupChats .prompts .prompt-avt {
+    flex-shrink: 0;
+    flex-direction: column;
+    align-items: end;
+    position: relative;
+    display: flex;
+    padding: 5px 10px;
+}
+
+.groupChats .prompts .prompt-message {
+    flex-shrink: 0;
+    flex-direction: column;
+    align-items: flex-start;
+    position: relative;
+    display: flex;
+    width: calc(100% - 50px);
+    gap: 0.75rem;
+    text-align: left;
+    margin-left: 40px;
+    color: #f8f8ff;
+    padding: 5px 10px;
+    border-radius: 10px;
+}
+
+.groupChats .prompts .prompt-message .message {
+    flex: 1;
+    word-wrap: break-word;
+    white-space: pre-wrap;
+    align-items: flex-start;
+    display: flex;
+    flex-direction: column;
+}
