@@ -1,2 +1,2 @@
 # ChatX
- A OpenAI ChatGPT wordpress plugin to integrate ChatGPT API with WordPress.
+ An OpenAI ChatGPT wordpress plugin to integrate ChatGPT API with WordPress.
